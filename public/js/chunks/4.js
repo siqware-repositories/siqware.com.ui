@@ -11,15 +11,17 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var ag_grid_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ag-grid-vue */ "./node_modules/ag-grid-vue/main.js");
-/* harmony import */ var ag_grid_vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ag_grid_vue__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _sass_vuexy_extraComponents_agGridStyleOverride_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @sass/vuexy/extraComponents/agGridStyleOverride.scss */ "./resources/sass/vuexy/extraComponents/agGridStyleOverride.scss");
-/* harmony import */ var _sass_vuexy_extraComponents_agGridStyleOverride_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sass_vuexy_extraComponents_agGridStyleOverride_scss__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _addUser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./addUser */ "./resources/js/src/views/user-management/addUser.vue");
-/* harmony import */ var _editUser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editUser */ "./resources/js/src/views/user-management/editUser.vue");
-/* harmony import */ var _changePasswordUser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./changePasswordUser */ "./resources/js/src/views/user-management/changePasswordUser.vue");
+/* harmony import */ var vue_gist_embed__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-gist-embed */ "./node_modules/vue-gist-embed/dist/vue-gist-embed.js");
+/* harmony import */ var vue_gist_embed__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_gist_embed__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var ag_grid_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ag-grid-vue */ "./node_modules/ag-grid-vue/main.js");
+/* harmony import */ var ag_grid_vue__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(ag_grid_vue__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _sass_vuexy_extraComponents_agGridStyleOverride_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @sass/vuexy/extraComponents/agGridStyleOverride.scss */ "./resources/sass/vuexy/extraComponents/agGridStyleOverride.scss");
+/* harmony import */ var _sass_vuexy_extraComponents_agGridStyleOverride_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_sass_vuexy_extraComponents_agGridStyleOverride_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _addUser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./addUser */ "./resources/js/src/views/user-management/addUser.vue");
+/* harmony import */ var _editUser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./editUser */ "./resources/js/src/views/user-management/editUser.vue");
+/* harmony import */ var _changePasswordUser__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./changePasswordUser */ "./resources/js/src/views/user-management/changePasswordUser.vue");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -76,14 +78,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//ag-grid
+//
+//Github Gist
+ //ag-grid
 
 
 
 
 
 
-var statusComponent = vue__WEBPACK_IMPORTED_MODULE_1___default.a.extend({
+
+var statusComponent = vue__WEBPACK_IMPORTED_MODULE_2___default.a.extend({
   template: '<vs-chip transparent style="height: 10px; margin-top: 10px;" :color="com_method()?\'success\':\'warning\'">\n' + '            {{com_method()?\'Active\':\'Trashed\'}}\n' + '        </vs-chip>',
   methods: {
     com_method: function com_method() {
@@ -91,7 +96,7 @@ var statusComponent = vue__WEBPACK_IMPORTED_MODULE_1___default.a.extend({
     }
   }
 });
-var roleComponent = vue__WEBPACK_IMPORTED_MODULE_1___default.a.extend({
+var roleComponent = vue__WEBPACK_IMPORTED_MODULE_2___default.a.extend({
   template: '<vs-chip transparent style="height: 10px; margin-top: 10px;" color="primary">\n' + '            {{com_method()}}\n' + '        </vs-chip>',
   methods: {
     com_method: function com_method() {
@@ -102,10 +107,11 @@ var roleComponent = vue__WEBPACK_IMPORTED_MODULE_1___default.a.extend({
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "User",
   components: {
-    ChangePasswordUser: _changePasswordUser__WEBPACK_IMPORTED_MODULE_6__["default"],
-    EditUser: _editUser__WEBPACK_IMPORTED_MODULE_5__["default"],
-    AddUser: _addUser__WEBPACK_IMPORTED_MODULE_4__["default"],
-    AgGridVue: ag_grid_vue__WEBPACK_IMPORTED_MODULE_2__["AgGridVue"]
+    ChangePasswordUser: _changePasswordUser__WEBPACK_IMPORTED_MODULE_7__["default"],
+    EditUser: _editUser__WEBPACK_IMPORTED_MODULE_6__["default"],
+    AddUser: _addUser__WEBPACK_IMPORTED_MODULE_5__["default"],
+    AgGridVue: ag_grid_vue__WEBPACK_IMPORTED_MODULE_3__["AgGridVue"],
+    VueGistEmbed: vue_gist_embed__WEBPACK_IMPORTED_MODULE_1___default.a
   },
   data: function data() {
     return {
@@ -800,6 +806,10 @@ var render = function() {
       _vm._v(" "),
       _c("vue-gist-embed", {
         attrs: { gistId: "89a5e8ae518d3167a24f7f1f79abe8d2" }
+      }),
+      _vm._v(" "),
+      _c("vue-gist-embed", {
+        attrs: { gistId: "2370294c9e86724cb075bee14746c11a" }
       })
     ],
     1

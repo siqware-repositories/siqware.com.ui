@@ -96,14 +96,17 @@ __webpack_require__.r(__webpack_exports__);
           if (data.message) {
             alert(data.message);
           } else {
-            self.$router.push({
-              name: 'home'
-            });
+            window.location.href = "/";
           }
         } else {
           alert('Please check input again!');
         }
       });
+    }
+  },
+  created: function created() {
+    if (this.$store.getters.isAuthenticated) {
+      window.location.href = "/";
     }
   }
 });

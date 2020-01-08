@@ -86,12 +86,17 @@
                         if (data.message){
                             alert(data.message)
                         } else {
-                            self.$router.push({ name: 'home'});
+                            window.location.href = "/"
                         }
                     } else {
-                            alert('Please check input again!')
+                        alert('Please check input again!')
                     }
                 })
+            }
+        },
+        created() {
+            if (this.$store.getters.isAuthenticated) {
+                window.location.href = "/"
             }
         }
     }

@@ -117,6 +117,9 @@ const mutations = {
     state.AppActiveUser.status      = "online";
     state.AppActiveUser.userRole    = payload.user.role;
     localStorage.setItem("userInfo", JSON.stringify({user_info:state.AppActiveUser,access_token:payload.access_token}))
+  },
+  UPDATE_USER_LOGIN(state, payload) {
+    state.AppActiveUser = payload.user_info
   }
 };
 

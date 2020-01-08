@@ -13,7 +13,7 @@
 
     <v-nav-menu
       :navMenuItems = "navMenuItems"
-      title         = "Vuexy"
+      title         = "SiqWare"
       parent        = ".layout--main" />
 
     <div id="content-area" :class="[contentAreaClass, {'show-overlay': bodyOverlay}]">
@@ -194,13 +194,14 @@ export default {
     }
   },
   async created() {
+    let self = this;
     const color = this.navbarColor == "#fff" && this.isThemeDark ? "#10163a" : this.navbarColor
-    this.updateNavbarColor(color)
+    this.updateNavbarColor(color);
     this.setNavMenuVisibility(this.$store.state.mainLayoutType);
     await this.$store.dispatch('fetchUser');
-    let userInfo = JSON.parse(localStorage.getItem("userInfo"));
-    if (!userInfo){
-      this.$router.push({ name: 'page-login'});
+    const token = JSON.parse(localStorage.getItem("userInfo"));
+    if (token) {
+      await self.$store.dispatch('updateUserData',token);
     }
   }
 }

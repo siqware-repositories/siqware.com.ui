@@ -16,7 +16,7 @@ import getters from "./getters"
 import mutations from "./mutations"
 import actions from "./actions"
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 import user from './modules/user'
 export default new Vuex.Store({

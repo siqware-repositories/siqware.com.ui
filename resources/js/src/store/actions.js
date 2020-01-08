@@ -61,7 +61,10 @@ const actions = {
         } catch (e) {
             return false
         }
-    }
-}
+    },
+    async updateUserData({ commit }, data) {
+        commit('UPDATE_USER_LOGIN', data);
+    },
+};
 
 export default actions
