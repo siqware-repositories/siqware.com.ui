@@ -93,29 +93,32 @@ const mutations = {
   // /////////////////////////////////////////////
   // User/Account
   // /////////////////////////////////////////////
-
   // Updates user info in state and localstorage
   UPDATE_USER_INFO(state, payload) {
-
     // Get Data localStorage
     let userInfo = JSON.parse(localStorage.getItem("userInfo")) || state.AppActiveUser
-
     for (const property of Object.keys(payload)) {
 
       if (payload[property] != null) {
         // If some of user property is null - user default property defined in state.AppActiveUser
         state.AppActiveUser[property] = payload[property]
-
         // Update key in localStorage
         userInfo[property] = payload[property]
       }
-
-
     }
     // Store data in localStorage
     localStorage.setItem("userInfo", JSON.stringify(userInfo))
   },
-}
+  USER_LOGIN(state, payload) {
+    state.AppActiveUser.uid         = payload.user.id;
+    state.AppActiveUser.displayName = payload.user.name; // From Auth
+    state.AppActiveUser.about       = "I love this app.";
+    state.AppActiveUser.photoURL    = payload.user.profile; // From Auth
+    state.AppActiveUser.status      = "online";
+    state.AppActiveUser.userRole    = payload.user.role;
+    localStorage.setItem("userInfo", JSON.stringify({user_info:state.AppActiveUser,access_token:payload.access_token}))
+  }
+};
 
 export default mutations
 

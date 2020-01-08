@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset(mix('css/vuesax.css')) }}">
     <link rel="stylesheet" href="{{ asset(mix('css/prism-tomorrow.css')) }}">
     <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
+    <link rel="stylesheet" href="https://github.githubassets.com/assets/gist-embed-123720f37c57ce9a8f29de081c38ed61.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('images/logo/favicon.png') }}">
   </head>

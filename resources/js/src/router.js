@@ -45,6 +45,24 @@ const router = new Router({
                         rule: 'admin'
                     }
                 },
+                {
+                    path: '/lazy-load',
+                    name: 'lazy-load',
+                    component: () => import('./views/lazy-load/LazyLoad'),
+                    meta: {
+                        pageTitle: 'Lazy Load',
+                        rule: 'admin'
+                    }
+                },
+                {
+                    path: '/user-management',
+                    name: 'user-management',
+                    component: () => import('./views/user-management/User'),
+                    meta: {
+                        pageTitle: 'Users Management',
+                        rule: 'admin'
+                    }
+                },
               {
                 path: '/page2',
                 name: 'page-2',
@@ -65,7 +83,7 @@ const router = new Router({
               {
                 path: '/pages/login',
                 name: 'page-login',
-                component: () => import('@/views/pages/Login.vue')
+                component: () => import('./views/pages/Login.vue')
               },
               {
                 path: '/pages/error-404',

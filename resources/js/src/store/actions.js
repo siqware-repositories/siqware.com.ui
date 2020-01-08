@@ -7,6 +7,8 @@
   Author URL: http://www.themeforest.net/user/pixinvent
 ==========================================================================================*/
 
+import axios from "axios";
+
 const actions = {
 
     // /////////////////////////////////////////////
@@ -49,6 +51,17 @@ const actions = {
     updateUserInfo({ commit }, payload) {
       commit('UPDATE_USER_INFO', payload)
     },
+    async userLogin({commit},data){
+        try {
+            const res = await axios.post(route('user.login'), data);
+            if (!res.data.message) {
+                commit('USER_LOGIN', res.data);
+            }
+            return res.data
+        } catch (e) {
+            return false
+        }
+    }
 }
 
 export default actions

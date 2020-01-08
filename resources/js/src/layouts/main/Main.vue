@@ -193,10 +193,15 @@ export default {
       this.hideScrollToTop = val
     }
   },
-  created() {
+  async created() {
     const color = this.navbarColor == "#fff" && this.isThemeDark ? "#10163a" : this.navbarColor
     this.updateNavbarColor(color)
-    this.setNavMenuVisibility(this.$store.state.mainLayoutType)
+    this.setNavMenuVisibility(this.$store.state.mainLayoutType);
+    await this.$store.dispatch('fetchUser');
+    let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    if (!userInfo){
+      this.$router.push({ name: 'page-login'});
+    }
   }
 }
 

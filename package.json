@@ -89,7 +89,7 @@
         "moment": "^2.24.0",
         "print-js": "^1.0.63",
         "sweet-modal-vue": "^2.0.0",
-        "vue-html2canvas": "0.0.4",
+        "vue-gist-embed": "^2.0.2",
         "vue-mj-daterangepicker": "^0.1.10",
         "vue-tinymce-editor": "^1.6.2",
         "vue2-dropzone": "^3.6.0"
